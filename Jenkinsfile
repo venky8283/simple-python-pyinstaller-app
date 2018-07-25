@@ -1,7 +1,7 @@
 pipeline {
     agent none 
     stages {
-        stage('Build') { 
+        stage('ho gaya?') { 
             agent {
                 docker {
                     image 'python:2-alpine' 
@@ -11,7 +11,7 @@ pipeline {
                 sh 'python -m py_compile sources/add2vals.py sources/calc.py' 
             }
         }
-        stage('Test') {
+        stage('ho gaya') {
             agent {
                 docker {
                     image 'qnib/pytest'
@@ -26,7 +26,7 @@ pipeline {
                 }
             }
         }
-             stage('Deliver') {
+             stage('ye kya ho gaya?') {
             agent {
                 docker {
                     image 'cdrx/pyinstaller-linux:python2'
